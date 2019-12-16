@@ -1,0 +1,17 @@
+{
+  "projectId": "p5f4yo",
+  "targetEnv": "prod",
+  "baseUrl": "https://localhost:3002",
+  "env": {
+    "staging": {
+      "baseUrl": "https://localhost.staging:3002",
+      "username": "stagingUser",
+      "password": "stagingPwd"
+    },
+    "prod": {
+      "baseUrl": "https://localhost:3002",
+      "username": "User",
+      "password": "Pwd"
+    }
+  }
+}

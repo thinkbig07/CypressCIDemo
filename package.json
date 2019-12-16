@@ -1,0 +1,32 @@
+{
+  "name": "modualapiproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "ModuleRun": "node moduleRunIndex.js",
+    "cy:run": "npm run cypress run",
+    "debug": "npm run cypress open",
+    "start": "node server.js",
+    "test": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test start https-get://localhost:3002 ci-run",
+    "ci-run": "npm run ci-run1 & npm run ci-run2",
+    "ci-run1": "cypress run --record --key 76657dee-364d-427f-ab1c-8f34eedd33e9 --group group1 --spec \"cypress/integration/first-spec.js\" --parallel",
+    "ci-run2": "cypress run --record --key 76657dee-364d-427f-ab1c-8f34eedd33e9 --group group2 --spec \"cypress/integration/third-spec.js\" --parallel"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "commander": "^4.0.1",
+    "console.table": "^0.10.0",
+    "cypress": "^3.7.0",
+    "faker": "^4.1.0",
+    "globby": "^10.0.1",
+    "json-server": "^0.15.1",
+    "mocha": "^5.2.0",
+    "mochawesome": "^4.1.0",
+    "mochawesome-merge": "^2.1.0",
+    "mochawesome-report-generator": "^4.0.1",
+    "start-server-and-test": "^1.10.6",
+    "shelljs": "^0.8.3"
+  }
+}
